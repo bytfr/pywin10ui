@@ -106,6 +106,8 @@ class Button():
         r2 = Rectangular(self.window, self.x + 1, self.y + 1, self.width - 2, self.height - 2, self.rgb2, 255)
         if self.x <= mousepos[0] <= self.x + self.width and mousepos[1] >= self.y and mousepos[
             1] <= self.y + self.height:
+            if self.window.event.type == pygame.MOUSEBUTTONDOWN and not self.mousebutton:
+                self.common()
             if self.window.event.type == pygame.MOUSEBUTTONDOWN:
                 self.mousebutton = True
             if self.window.event.type == pygame.MOUSEBUTTONUP:
@@ -122,7 +124,7 @@ class Button():
         r1.paint()
         r2.paint()
 
-        font1 = pygame.font.SysFont("微软雅黑", 20)
+        font1 = pygame.font.SysFont("microsoftyaheimicrosoftyaheiui", 14)
         painttext = FillText(self.window, self.text, self.x + (
                 (self.width / 2) - (font1.render(self.text, True, (255, 255, 255)).get_width() / 2)), self.y + (
                                      (self.height / 2) - (
@@ -174,7 +176,7 @@ class Entry():
                     self.text = e
                 if not self.common is None:
                     self.common()
-        font1 = pygame.font.SysFont("微软雅黑", 20)
+        font1 = pygame.font.SysFont("microsoftyaheimicrosoftyaheiui", 14)
         painttext = FillText(self.window, self.text, self.x + 2, self.y + (
                 (self.height / 2) - (font1.render(self.text, True, (255, 255, 255)).get_height() / 2)), font1,
                              (0, 0, 0), True, (0, 0, self.width - 4, self.height))
@@ -221,7 +223,7 @@ class Select_box():
     def mainloop(self):
         if self.selected is None:
             self.selected = False
-        font1 = pygame.font.SysFont("微软雅黑", 20)
+        font1 = pygame.font.SysFont("microsoftyaheimicrosoftyaheiui", 14)
         Rectangular(self.window, self.x, self.y, 20, 20, (0, 0, 0), 255).paint()
         Rectangular(self.window, self.x + 1, self.y + 1, 20 - 2, 20 - 2, (255, 255, 255), 255).paint()
         if self.selected:
@@ -265,7 +267,7 @@ class Picture_box():
             self.window.canvas.blit(self.img, (self.x, self.y), (0, 0, self.width, self.height))
 
 
-print('''PyWin10UI 0.0.7
+print('''PyWin10UI 0.0.9
 PyWin10UI 0.0.7 语法进行了修改，可能跟使用的PyWin10UI 0.0.6及以下版本不兼容，请进行修改
 The syntax of PyWin10UI 0.0.7 has been modified, which may not be compatible
 with the version of PyWin10UI 0.0.6 or below. Please modify it.

@@ -89,9 +89,13 @@ def quit_def():
         sys.exit()
 
 
+def button_commond():
+    print("button down")
+
+
 window = pywin10ui.Window("测试", 300, 200, Exit_the_method=quit_def)
 
-button = pywin10ui.Button(window, 150, 1, "Button", 80, 32)
+button = pywin10ui.Button(window, 150, 1, "Button", 80, 32, common=button_commond)
 entry = pywin10ui.Entry(window, 1, 25, "Entry", 100, 20)
 progress_bar = pywin10ui.Progress_bar(window, 1, 50, 100, 20, 100, 50)
 select_box = pywin10ui.Select_box(window, 1, 75, "Select_box")
@@ -109,6 +113,7 @@ while 1:
     picture_box.mainloop()
 
     window.set_tiltle("测试 DEMO")
+
 
 
 ```

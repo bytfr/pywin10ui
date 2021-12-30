@@ -1,5 +1,5 @@
 # coding:utf-8
-import __init__ as pywin10ui, tkinter.messagebox, pygame, sys
+import pywin10ui, tkinter.messagebox, pygame, sys
 
 
 def quit_def():

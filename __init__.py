@@ -204,7 +204,7 @@ class Progress_bar():
         Rectangular(self.window, self.x, self.y, self.width, self.height, (175, 175, 175), 255).paint()
         Rectangular(self.window, self.x + 1, self.y + 1, self.width - 2, self.height - 2, (255, 255, 255), 255).paint()
         Rectangular(self.window, self.x + 1, self.y + 1,
-                    self.width - 2 - ((self.width - 2) / self.max_location * self.location), self.height - 2,
+                    ((self.width - 2) / self.max_location * self.location), self.height - 2,
                     (6, 176, 37), 255).paint()
 
 
@@ -266,9 +266,5 @@ class Picture_box():
         if not self.img is None:
             self.window.canvas.blit(self.img, (self.x, self.y), (0, 0, self.width, self.height))
 
-
-print('''PyWin10UI 0.0.9
-PyWin10UI 0.0.7 语法进行了修改，可能跟使用的PyWin10UI 0.0.6及以下版本不兼容，请进行修改
-The syntax of PyWin10UI 0.0.7 has been modified, which may not be compatible
-with the version of PyWin10UI 0.0.6 or below. Please modify it.
-开发文档 Development documentation:https://github.com/bytfr/pywin10ui''')
+print('''PyWin10UI 0.0.9 Python %s on %s
+The PyWin10UI Development documentation:https://github.com/bytfr/pywin10ui''' % (sys.version, sys.platform))

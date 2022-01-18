@@ -12,8 +12,11 @@
 **需要额外安装EasyGUI和Pygame模块**
 
 ## 依赖模块安装命令
+
+```shell
 pip install pygame
 pip install easygui
+```
 
 ## Window() 窗口类
 

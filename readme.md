@@ -11,7 +11,7 @@
 **本模块依赖Pygame，所以本模块可以跟Pygame交互**
 **需要额外安装EasyGUI和Pygame模块**
 
-##依赖模块安装命令
+## 依赖模块安装命令
 pip install pygame
 pip install easygui
 
